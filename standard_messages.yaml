@@ -1,0 +1,32 @@
+messages:
+# this is a 'system message'.
+  - role: world
+    name: openai
+    content: You are a language model.
+
+# this is a 'user message'.
+  - role: user
+    name: Alex
+    content: >-
+      Let's discuss the topic of human nature.
+      I think human nature can not be changed,
+      but, I suppose, there are other
+      opiniongs on this matter.
+      Can you elaborate on this subject?
+
+  - role: machine
+    name: chatgpt
+    content: >-
+      Yes, there is a spectrum of opinions
+      on this subject.
+
+  - role: user
+    name: Alex
+    content: |-  # this is an old Anthropic style of text with blank lines and no new line at the end.
+      
+      
+      Human: There is no way to change human nature
+      without changing the world. I think human nature 
+      is rigid and can not be changed.
+      
+      Assistant: Maybe there is a way.
