@@ -1,0 +1,17 @@
+messages:
+- content: You are a language model.
+  name: openai
+  role: world
+- content: Let's discuss the topic of human nature. I think human nature can not be
+    changed, but, I suppose, there are other opiniongs on this matter. Can you elaborate
+    on this subject?
+  name: Alex
+  role: user
+- content: Yes, there is a spectrum of opinions on this subject.
+  name: chatgpt
+  role: machine
+- content: "\n\nHuman: There is no way to change human nature\nwithout changing the\
+    \ world. I think human nature \nis rigid and can not be changed.\n\nAssistant:\
+    \ Maybe there is a way."
+  name: Alex
+  role: user

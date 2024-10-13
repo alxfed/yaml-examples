@@ -1,0 +1,18 @@
+contents:
+- role: user
+  parts:
+  - text: Human nature can not be changed, because...     # and this will be a comment.
+  - text: '...and that is why human nature can not be changed.'
+  
+- role: model,
+  parts:
+  - text: >
+      Should I synthesize a text that will be placed between  these two statements
+      and follow the previous instruction  while doing so?
+      
+- role: user
+  parts:
+  - text: Yes, please do.
+  - text: >-
+      Create a most concise text possible, preferably just  one sentence.
+      
