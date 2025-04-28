@@ -1,0 +1,45 @@
+# Example 1: Transform a single file
+python yaml_transform.py input.yaml output.yaml
+
+# Example 2: Transform a single file with verbose output
+python yaml_transform.py -v input.yaml output.yaml
+
+# Example 3: Transform all YAML files in a directory
+python yaml_transform.py input_dir/ output_dir/
+
+# Example 4: Process files programmatically
+from yaml_transform import transform_yaml
+
+# Transform a single file
+success = transform_yaml('input.yaml', 'output.yaml', verbose=True)
+if success:
+    print("Transformation successful!")
+else:
+    print("Transformation failed!")
+
+# Example 5: Handling a YAML with special characters
+"""
+Example input YAML:
+- parts:
+  - text: "what is it? With 'quotes' and some \n newlines"
+  role: user
+- parts:
+  - text: "this is a... With \"double quotes\" and 'single quotes' and \t tabs"
+  role: model
+- parts:
+  - text: "Multi-line\ntext\nwith special chars: & * % $ # @ !"
+  role: user
+"""
+
+"""
+Example output YAML:
+- role: Human
+  text: "what is it? With 'quotes' and some \n newlines"
+- role: machine
+  text: 'this is a... With "double quotes" and ''single quotes'' and \t tabs'
+- role: Human
+  text: |
+    Multi-line
+    text
+    with special chars: & * % $ # @ !
+"""
